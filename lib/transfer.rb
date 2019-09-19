@@ -7,4 +7,8 @@ def initialize(person_1, person_2, amount)
 @amount = amount 
 end
 
+def valid?
+if self.sender.
+
+end 
 end 
