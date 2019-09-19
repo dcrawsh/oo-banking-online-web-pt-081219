@@ -21,6 +21,7 @@ self.sender.balance -= self.amount
 self.receiver.balance += self.amount 
 self.status = 'complete'
 self.amount = 0 
+true 
 else 
 self.status = 'rejected'
 "Transaction rejected. Please check your account balance."
@@ -32,6 +33,7 @@ if self.execute_transaction
 self.receiver.balance -= self.amount
 self.sender.balance += self.amount  
 self.amount = 0 
+
 else 
 false
 end 
