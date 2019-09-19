@@ -28,8 +28,12 @@ end
 end 
 
 def reverse_transfer
+if self.execute_transaction
 self.receiver.balance -= self.amount
 self.sender.balance += self.amount  
 self.amount = 0 
+else 
+false
+end 
 end 
 end 
