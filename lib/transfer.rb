@@ -8,11 +8,16 @@ def initialize(person_1, person_2, amount)
 end
 
 def valid?
-if self.sender.valid? and self.receiver.valid?
+if self.sender.valid? && self.receiver.valid?
 true 
 else
 false 
 end 
 end 
+
+def execute_transaction 
+self.sender.balance  
+end 
+
 
 end 
