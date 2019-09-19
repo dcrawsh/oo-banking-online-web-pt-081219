@@ -6,3 +6,4 @@ def initialize(person_1, person_2, amount)
 @status = 'pending'
 end
 
+end 
