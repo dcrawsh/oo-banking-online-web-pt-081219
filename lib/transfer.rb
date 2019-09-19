@@ -29,13 +29,12 @@ end
 end 
 
 def reverse_transfer
-if self.execute_transaction
-self.receiver.balance -= self.amount
-self.sender.balance += self.amount  
-self.amount = 0 
-
-else 
-false
-end 
-end 
+    if valid? && receiver.balance > amount && self.status == "complete"
+      receiver.balance -= amount
+      sender.balance += amount
+      self.status = "reversed"
+    else
+      reject_transfer
+    end
+  end
 end 
