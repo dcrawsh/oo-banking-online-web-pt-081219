@@ -8,7 +8,11 @@ def initialize(person_1, person_2, amount)
 end
 
 def valid?
-if self.sender.
-
+if self.sender.valid? and self.receiver.valid?
+true 
+else
+false 
 end 
+end 
+
 end 
